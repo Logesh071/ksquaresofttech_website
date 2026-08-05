@@ -1,0 +1,4934 @@
+/* =========================================================
+   KSquare SoftTech Website CSS
+   Part 1A
+   Imports • Reset • Global Styles • Navbar
+========================================================= */
+
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@700;800&display=swap");
+
+/* =========================================================
+   CSS RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+section {
+  padding: 90px 0;
+}
+
+/* =========================================================
+   COMMON UTILITIES
+========================================================= */
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 15px auto 0;
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.gradient-text {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #7c3aed,
+    #ec4899
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.highlight {
+  position: relative;
+  color: #0d6efd;
+  font-weight: 700;
+  transition: color 0.35s ease;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0d6efd, #00c6ff);
+  transition: width 0.35s ease;
+}
+
+.highlight:hover {
+  color: #198754;
+}
+
+.highlight:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   CUSTOM SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+::selection {
+  background: #ffc107;
+  color: #111;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+/*==========================================================
+                    NAVBAR
+==========================================================*/
+
+.custom-navbar{
+    background:#0f172a;
+    padding:14px 0;
+    transition:.35s;
+    z-index:999;
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.custom-navbar.scrolled{
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+/*==========================================================
+                    LOGO
+==========================================================*/
+
+.navbar-brand{
+    color:#fff !important;
+    font-size:2rem;
+    font-weight:700;
+    letter-spacing:.3px;
+    transition:.3s;
+}
+
+.navbar-brand:hover{
+    color:#3b82f6 !important;
+}
+
+/*==========================================================
+                    TOGGLER
+==========================================================*/
+
+.navbar-toggler{
+    border:none;
+    background:transparent;
+}
+
+.navbar-toggler:focus{
+    box-shadow:none;
+}
+
+.navbar-toggler i{
+    color:#fff;
+    font-size:30px;
+}
+
+/*==========================================================
+                    MENU
+==========================================================*/
+
+.navbar-nav{
+    gap:10px;
+}
+
+.nav-item{
+    display:flex;
+    align-items:center;
+}
+
+/*==========================================================
+                    NAV BUTTON
+==========================================================*/
+
+.nav-btn{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    height:46px;
+
+    padding:0 18px;
+
+    border:none;
+    border-radius:8px;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.nav-btn i{
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+/* Hover */
+
+.nav-btn:hover{
+
+    background:rgba(37,99,235,.15);
+
+    color:#60a5fa;
+
+}
+
+.nav-btn:hover i{
+
+    color:#60a5fa;
+
+}
+
+/* Active */
+
+.active-link{
+
+    background:#2563eb;
+
+    color:#fff !important;
+
+    box-shadow:0 8px 18px rgba(37,99,235,.30);
+
+}
+
+.active-link i{
+
+    color:#fff !important;
+
+}
+
+.active-link:hover{
+
+    background:#1d4ed8;
+
+    color:#fff !important;
+
+}
+
+/* Remove underline */
+
+.nav-btn::after{
+
+    display:none !important;
+
+}
+
+/*==========================================================
+                ENQUIRY BUTTON
+==========================================================*/
+
+.enquiry-btn{
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:11px 24px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.enquiry-btn:hover{
+
+    background:linear-gradient(135deg,#1d4ed8,#2563eb);
+
+    transform:translateY(-2px);
+
+    color:#fff;
+
+}
+
+/*==========================================================
+                    MOBILE
+==========================================================*/
+
+@media(max-width:991px){
+
+.custom-navbar{
+
+padding:12px 0;
+
+}
+
+.navbar-collapse{
+
+margin-top:15px;
+
+background:#111827;
+
+padding:18px;
+
+border-radius:12px;
+
+animation:fadeIn .3s;
+
+}
+
+.navbar-nav{
+
+gap:8px;
+
+}
+
+.nav-item{
+
+width:100%;
+
+}
+
+.nav-btn{
+
+width:100%;
+
+justify-content:flex-start;
+
+padding:0 15px;
+
+height:48px;
+
+}
+
+.active-link{
+
+background:#2563eb;
+
+}
+
+.enquiry-btn{
+
+width:100%;
+
+margin-top:12px;
+
+}
+
+}
+
+/*==========================================================
+                SMALL DEVICES
+==========================================================*/
+
+@media(max-width:576px){
+
+.navbar-brand{
+
+font-size:1.55rem;
+
+}
+
+.nav-btn{
+
+font-size:15px;
+
+}
+
+}
+
+/*==========================================================
+                    ANIMATION
+==========================================================*/
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(-10px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/* =========================================================
+   PART 1B
+   OFFER BAR + HERO BASE
+========================================================= */
+
+/* =========================================================
+   OFFER BAR
+========================================================= */
+
+.offer-bar {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  background: blue;
+}
+
+.offer-slider {
+  display: flex;
+  width: max-content;
+  animation: offerMove 50s linear infinite;
+}
+
+.offer-slider:hover {
+  animation-play-state: paused;
+}
+
+.offer-item {
+  margin-right: 70px;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@keyframes offerMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 120px 0 80px;
+  transition: all .6s ease;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .35);
+  z-index: 1;
+}
+
+/* =========================================================
+   BACKGROUND SHAPES
+========================================================= */
+
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hero-section::before {
+  width: 650px;
+  height: 650px;
+  top: -250px;
+  left: -180px;
+  background: rgba(255, 255, 255, .08);
+  animation: floatCircle 12s linear infinite;
+}
+
+.hero-section::after {
+  width: 500px;
+  height: 500px;
+  right: -180px;
+  bottom: -180px;
+  background: rgba(255, 255, 255, .05);
+  animation: floatCircle2 10s linear infinite;
+}
+
+/* =========================================================
+   HERO BADGE
+========================================================= */
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 10px 22px;
+
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, .12);
+  backdrop-filter: blur(15px);
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.hero-heading {
+  margin-bottom: 20px;
+
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* =========================================================
+   TYPEWRITER
+========================================================= */
+
+.hero-dynamic-text {
+  min-height: 70px;
+  margin-bottom: 20px;
+
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.Typewriter__cursor {
+  color: #FFD700;
+  animation: blink .8s infinite;
+}
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-subtitle {
+  max-width: 560px;
+  margin-bottom: 35px;
+
+  color: rgba(255, 255, 255, .9);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero-buttons .btn {
+  position: relative;
+  overflow: hidden;
+
+  padding: 14px 34px;
+  border-radius: 50px;
+
+  font-weight: 700;
+  transition: all .35s ease;
+}
+
+.hero-buttons .btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0;
+  background: rgba(255, 255, 255, .15);
+  transition: .4s;
+}
+
+.hero-buttons .btn:hover::before {
+  width: 100%;
+}
+
+.hero-buttons .btn-warning:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(255, 193, 7, .40);
+}
+
+.hero-buttons .btn-outline-light:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================================================
+   HERO HIGHLIGHTS
+========================================================= */
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.hero-highlights span {
+  padding: 10px 18px;
+
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, .12);
+  backdrop-filter: blur(10px);
+
+  color: #fff;
+  font-size: 14px;
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image {
+  width: 100%;
+  border-radius: 25px;
+  transition: .4s;
+}
+
+.hero-image:hover {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   HERO ENTRANCE ANIMATION
+========================================================= */
+
+.hero-heading,
+.hero-dynamic-text,
+.hero-subtitle,
+.hero-buttons,
+.hero-highlights {
+  animation: fadeUp .9s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes floatCircle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(40px) rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes floatCircle2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-35px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   PART 1C
+   HERO STATS • FLOATING ICONS • VIDEO CARD
+   STUDENT CARD • SCROLL INDICATOR • RESPONSIVE
+========================================================= */
+
+
+/* =========================================================
+   HERO STATISTICS
+========================================================= */
+
+.hero-stat {
+  padding: 22px 10px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, .10);
+  border: 1px solid rgba(255, 255, 255, .10);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+
+  transition: all .35s ease;
+}
+
+.hero-stat:hover {
+  transform: translateY(-8px);
+}
+
+.hero-stat h2 {
+  margin-bottom: 5px;
+
+  color: #FFD700;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.hero-stat p {
+  margin: 0;
+
+  color: #fff;
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   FLOATING TECHNOLOGY ICONS
+========================================================= */
+
+.floating {
+  position: absolute;
+  z-index: 1;
+
+  font-size: 40px;
+  color: rgba(255, 255, 255, .18);
+
+  animation: floatIcon 6s ease-in-out infinite;
+}
+
+.react {
+  top: 18%;
+  left: 6%;
+}
+
+.node {
+  top: 72%;
+  left: 12%;
+}
+
+.python {
+  top: 12%;
+  right: 15%;
+}
+
+.mongo {
+  top: 82%;
+  right: 12%;
+}
+
+.js {
+  top: 48%;
+  right: 4%;
+}
+
+.db {
+  bottom: 10%;
+  left: 45%;
+}
+
+.express {
+  top: 28%;
+  right: 34%;
+}
+
+@keyframes floatIcon {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+}
+
+
+/* =========================================================
+   VIDEO CARD
+========================================================= */
+
+.video-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 25px;
+
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .15);
+  backdrop-filter: blur(20px);
+
+  border-radius: 30px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+
+  transition: all .45s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, .45);
+}
+
+
+/* =========================================================
+   SHINE EFFECT
+========================================================= */
+
+.video-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -50%;
+  left: -50%;
+
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(45deg,
+      transparent,
+      rgba(255, 255, 255, .08),
+      transparent);
+
+  transform: rotate(25deg);
+
+  animation: shine 8s linear infinite;
+}
+
+@keyframes shine {
+
+  from {
+    transform: translateX(-100%) rotate(25deg);
+  }
+
+  to {
+    transform: translateX(100%) rotate(25deg);
+  }
+
+}
+
+
+/* =========================================================
+   FLOATING LABEL
+========================================================= */
+
+.video-card::after {
+  content: "500+ Happy Students";
+
+  position: absolute;
+
+  right: 20px;
+  bottom: 20px;
+
+  padding: 8px 16px;
+
+  background: #0ea5e9;
+  color: #fff;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.review-badge {
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  background: #FFC107;
+  color: #111;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.online-badge {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  background: #16a34a;
+  color: #fff;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+}
+
+.play-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 70px;
+  color: #fff;
+
+  opacity: .85;
+  pointer-events: none;
+
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   VIDEO CONTENT
+========================================================= */
+
+.video-content h3 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.video-content p {
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+.stars {
+  font-size: 22px;
+}
+
+.rating-text {
+  color: #fff;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   STUDENT CARD
+========================================================= */
+
+.student-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 15px;
+
+  background: rgba(255, 255, 255, .08);
+
+  border-radius: 18px;
+}
+
+.student-image {
+  width: 65px;
+  height: 65px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+  border: 3px solid #FFC107;
+}
+
+.student-card h5 {
+  margin: 0;
+  color: #fff;
+}
+
+.student-card small {
+  color: #FFD700;
+}
+
+.student-message {
+  margin-top: 18px;
+
+  color: #e5e5e5;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   VIDEO BUTTONS
+========================================================= */
+
+.video-card .btn {
+  padding: 14px;
+  border-radius: 50px;
+
+  font-weight: 700;
+
+  transition: .35s;
+}
+
+.video-card .btn-warning:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(255, 193, 7, .35);
+}
+
+.video-card .btn-outline-light:hover {
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll-down {
+  position: absolute;
+
+  left: 50%;
+  bottom: 30px;
+
+  transform: translateX(-50%);
+
+  color: #fff;
+
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, 12px);
+  }
+
+}
+
+
+/* =========================================================
+   HERO RESPONSIVE
+========================================================= */
+
+@media (max-width:1200px) {
+
+  .hero-heading {
+    font-size: 3.5rem;
+  }
+
+  .hero-dynamic-text {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width:992px) {
+
+  .hero-section {
+    padding-top: 120px;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto 30px;
+  }
+
+  .hero-buttons,
+  .hero-highlights,
+  .rating-box {
+    justify-content: center;
+  }
+
+  .student-card {
+    justify-content: center;
+  }
+
+  .video-card {
+    margin-top: 50px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .hero-section {
+    padding-top: 100px;
+  }
+
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+
+  .hero-dynamic-text {
+    font-size: 1.45rem;
+    min-height: 50px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-stat {
+    margin-bottom: 15px;
+  }
+
+  .student-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rating-box {
+    flex-direction: column;
+  }
+
+  .play-icon {
+    font-size: 55px;
+  }
+
+}
+
+@media (max-width:480px) {
+
+  .hero-heading {
+    font-size: 2rem;
+  }
+
+  .hero-dynamic-text {
+    font-size: 1.2rem;
+  }
+
+  .hero-badge {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+
+  .review-badge {
+    font-size: 12px;
+  }
+
+  .online-badge {
+    font-size: 11px;
+  }
+
+  .video-content p {
+    font-size: 14px;
+  }
+
+  .hero-stat h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-stat p {
+    font-size: 13px;
+  }
+
+  .student-image {
+    width: 55px;
+    height: 55px;
+  }
+
+  .video-card::after {
+    display: none;
+  }
+
+}
+
+/* =========================================================
+   PART 2A
+   ABOUT SECTION
+========================================================= */
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section {
+  background: #f8fbff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================================
+   ABOUT BADGE
+========================================================= */
+
+.about-badge {
+  display: inline-block;
+
+  padding: 10px 25px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+
+  border-radius: 50px;
+}
+
+/* =========================================================
+   ABOUT TITLE
+========================================================= */
+
+.about-title {
+  font-family: "Sora", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+  color: #0f172a;
+}
+
+/* =========================================================
+   ABOUT DESCRIPTION
+========================================================= */
+
+.about-text {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  text-align: justify;
+
+  color: #4b5563;
+  font-size: 1.15rem;
+  line-height: 1.9;
+}
+
+.about-desc {
+  color: #6b7280;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.about-section p {
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   ABOUT IMAGE
+========================================================= */
+
+.about-image {
+  position: relative;
+}
+
+.about-section img {
+  width: 100%;
+  border-radius: 20px;
+  transition: .4s ease;
+}
+
+.about-section img:hover {
+  transform: scale(1.02);
+}
+
+/* =========================================================
+   PLAY BUTTON
+========================================================= */
+
+.play-btn {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 85px;
+  height: 85px;
+
+  border: none;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: #0d6efd;
+  color: #fff;
+
+  font-size: 40px;
+
+  box-shadow: 0 15px 35px rgba(13, 110, 253, .35);
+
+  transition: .35s ease;
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: #0056d2;
+}
+
+/* =========================================================
+   ABOUT CARDS
+========================================================= */
+
+.about-section .card {
+  border: none;
+  border-radius: 18px;
+
+  transition: .35s ease;
+}
+
+.about-section .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, .12);
+}
+
+.about-section h2 {
+  color: #0b1c39;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-content {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* =========================================================
+   HIGHLIGHT COLORS
+========================================================= */
+
+.highlight-dark {
+  color: #212529;
+  font-weight: 700;
+}
+
+.learn {
+  color: #2563eb;
+}
+
+.build {
+  color: #10b981;
+}
+
+.innovate {
+  color: #f59e0b;
+}
+
+.grow {
+  color: #ef4444;
+}
+
+/* =========================================================
+   ABOUT ANIMATION
+========================================================= */
+
+.about-image,
+.about-content,
+.about-card {
+  animation: fadeUp .8s ease both;
+}
+
+/* =========================================================
+   ABOUT RESPONSIVE
+========================================================= */
+
+@media (max-width:992px) {
+
+  .about-content {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-heading {
+    font-size: 1.8rem;
+  }
+
+  .about-text {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .about-list {
+    text-align: left;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-heading {
+    font-size: 1.5rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .about-desc {
+    font-size: 15px;
+  }
+
+  .play-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-heading {
+    font-size: 1.35rem;
+  }
+
+  .about-badge {
+    padding: 8px 18px;
+    font-size: 1rem;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+
+  .about-desc {
+    font-size: 14px;
+  }
+
+  .play-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+}
+
+/* =========================================================
+   PART 2B
+   SERVICES SECTION
+========================================================= */
+
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
+
+.services-section {
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.services-section .section-title {
+  color: #0f172a;
+}
+
+.services-section .section-subtitle {
+  max-width: 700px;
+  margin: 15px auto 0;
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+
+
+
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+
+  height: 100%;
+
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+
+  transition: all .35s ease;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   ANIMATED BORDER
+========================================================= */
+
+.service-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -75%;
+  left: -75%;
+
+  width: 250%;
+  height: 250%;
+
+  background: conic-gradient(transparent,
+      #0d6efd,
+      #00d4ff,
+      #20c997,
+      #0d6efd,
+      transparent);
+
+  opacity: 0;
+
+  animation: rotateBorder 4s linear infinite;
+  transition: opacity .4s ease;
+}
+
+.service-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 3px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  z-index: 0;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.service-card .card-body {
+  position: relative;
+  z-index: 2;
+
+  padding: 35px 25px;
+}
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 45px rgba(13, 110, 253, .20);
+}
+
+/* =========================================================
+   SERVICE ICON
+========================================================= */
+
+.service-card i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+  height: 90px;
+
+  margin-bottom: 20px;
+
+  background: rgba(13, 110, 253, .08);
+
+  border-radius: 50%;
+
+  color: #0d6efd;
+  font-size: 42px;
+
+  transition: all .35s ease;
+}
+
+.service-card:hover i {
+  background: #ffc107;
+  color: #fff;
+
+  transform: rotate(12deg) scale(1.12);
+}
+
+/* =========================================================
+   SERVICE TITLE
+========================================================= */
+
+.service-card h4 {
+  margin-bottom: 15px;
+
+  color: #0f172a;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   SERVICE DESCRIPTION
+========================================================= */
+
+.service-card p {
+  margin-bottom: 20px;
+
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SERVICE BUTTON
+========================================================= */
+
+.service-card .btn {
+  border-radius: 50px;
+  font-weight: 600;
+  transition: .35s;
+}
+
+.service-card .btn:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes rotateBorder {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+/* =========================================================
+   ENTRANCE ANIMATION
+========================================================= */
+
+.service-card {
+  animation: fadeUp .8s ease both;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:992px) {
+
+  .service-card {
+    margin-bottom: 25px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .service-card .card-body {
+    padding: 30px 20px;
+  }
+
+  .service-card i {
+    width: 75px;
+    height: 75px;
+    font-size: 36px;
+  }
+
+  .service-card h4 {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .service-card .card-body {
+    padding: 25px 18px;
+  }
+
+  .service-card i {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+  }
+
+  .service-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+}
+
+/* =========================================================
+   PART 2C
+   COURSES • INTERNSHIP • WHY CHOOSE US
+========================================================= */
+/* =========================================================
+   COURSES SECTION
+========================================================= */
+
+#courses {
+  background: #f8fafc;
+}
+
+/* =========================================================
+   COURSE CARD
+========================================================= */
+
+.course-card {
+  height: 100%;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all .35s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(37,99,235,.18);
+}
+
+/* =========================================================
+   POPULAR BADGE
+========================================================= */
+
+.course-card .badge {
+  font-size: 11px;
+  padding: 7px 14px;
+  border-radius: 30px;
+}
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.course-card .card-body {
+  padding: 22px;
+}
+
+.course-card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.course-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.course-card hr {
+  opacity: .12;
+  margin: 18px 0;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.icon-box {
+  width: 75px;
+  height: 75px;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg,#2563eb,#4f46e5);
+
+  color: #fff;
+  font-size: 32px;
+
+  box-shadow: 0 10px 25px rgba(37,99,235,.25);
+}
+
+.icon-box i{
+  color:#fff;
+}/* =========================================================
+   COURSE DETAILS
+========================================================= */
+
+.course-card h6 {
+  font-size: .9rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.course-card small {
+  display: block;
+  color: #6b7280;
+  font-size: .82rem;
+  font-weight: 500;
+}
+
+.course-card .row i {
+  transition: .3s;
+}
+
+.course-card:hover .row i {
+  transform: scale(1.15);
+}
+
+/* =========================================================
+   FEATURE BADGES
+========================================================= */
+
+.course-card .d-flex {
+  gap: 8px;
+}
+
+.course-card .badge.bg-success,
+.course-card .badge.bg-warning,
+.course-card .badge.bg-info {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 50px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.course-card .card-footer {
+  background: transparent;
+  border: none;
+  padding: 0 22px 22px;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.course-card .btn {
+  border-radius: 50px;
+  padding: 12px;
+  font-weight: 600;
+  transition: all .35s ease;
+}
+
+.course-card .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, .25);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .course-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .icon-box {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+  }
+
+  .course-card .card-body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .course-card {
+    margin-bottom: 20px;
+  }
+
+  .course-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .course-card .badge {
+    font-size: 9px;
+    padding: 6px 10px;
+  }
+
+  .course-card h6 {
+    font-size: .82rem;
+  }
+
+  .course-card small {
+    font-size: .75rem;
+  }
+
+  .course-card .btn {
+    padding: 10px;
+    font-size: .95rem;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .course-card .card-body {
+    padding: 18px;
+  }
+
+  .icon-box {
+    width: 65px;
+    height: 65px;
+    font-size: 28px;
+  }
+
+  .course-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .course-card p {
+    font-size: .85rem;
+  }
+
+  .course-card .badge.bg-success,
+  .course-card .badge.bg-warning,
+  .course-card .badge.bg-info {
+    font-size: 9px;
+    padding: 5px 9px;
+  }
+}
+
+.section-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #0d6efd, #2563eb);
+  color: #fff;
+  padding: 14px 45px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#courses h2 {
+  font-size: 3.8rem;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  #courses h2 {
+    font-size: 2.3rem;
+  }
+
+  .section-badge {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+/* =========================================================
+   INTERNSHIP SECTION
+========================================================= */
+/* ===========================
+   Internship Section
+=========================== */
+
+.internship-section{
+    padding:90px 0;
+    background:#fff;
+}
+
+/* Heading */
+
+.section-title{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 55px;
+}
+
+.section-title h6{
+    color:#2563eb;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.section-title h2{
+    font-size:2.7rem;
+    font-weight:700;
+    margin-bottom:18px;
+    line-height:1.3;
+}
+
+.section-title span{
+    color:#2563eb;
+}
+
+.section-title p{
+    color:#6c757d;
+    margin:0;
+}
+
+/* Image */
+
+.internship-image{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+/* Badge */
+
+.career-badge{
+    display:inline-block;
+    margin-top:25px;
+    padding:10px 20px;
+    border-radius:50px;
+    background:#2563eb;
+    color:#fff;
+    font-weight:600;
+}
+
+/* Counter */
+
+.counter-box{
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    margin:35px 0;
+}
+
+.counter-box h2{
+    color:#2563eb;
+    font-size:2rem;
+    margin-bottom:4px;
+    font-weight:700;
+}
+
+.counter-box span{
+    color:#666;
+    font-size:15px;
+}
+
+/* Technology */
+
+.tech-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:20px;
+}
+
+.tech-chip{
+    padding:10px 20px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.tech-chip:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(37,99,235,.25);
+}
+
+/* Buttons */
+
+.btn-group-custom{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:35px;
+}
+
+.btn-primary-custom{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:#fff;
+    padding:14px 32px;
+    border-radius:50px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-primary-custom:hover{
+    color:#fff;
+    transform:translateY(-4px);
+}
+
+.btn-outline-custom{
+    border:2px solid #2563eb;
+    color:#2563eb;
+    background:#fff;
+    padding:14px 32px;
+    border-radius:50px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-outline-custom:hover{
+    background:#25D366;
+    border-color:#25D366;
+    color:#fff;
+    transform:translateY(-4px);
+}
+
+/* Benefit */
+
+.benefit-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px 20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    height:100%;
+}
+
+.benefit-card:hover{
+    transform:translateY(-8px);
+}
+
+.benefit-card i{
+    font-size:45px;
+    color:#16a34a;
+    margin-bottom:18px;
+}
+
+.benefit-card h5{
+    margin:0;
+    font-size:18px;
+    font-weight:600;
+}
+
+/* Why Card */
+
+.why-card{
+    margin-top:25px;
+    background:#f8f9fa;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    
+}
+
+.why-card h4{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#666;
+    margin:0;
+    line-height:1.8;
+}
+
+/* Mobile */
+
+@media(max-width:991px){
+
+.section-title h2{
+    font-size:2rem;
+}
+
+.counter-box{
+    gap:15px;
+}
+
+.btn-group-custom{
+    flex-direction:column;
+}
+
+.btn-group-custom .btn{
+    width:100%;
+    text-align:center;
+}
+
+}
+
+@media(max-width:576px){
+
+.internship-section{
+    padding:70px 0;
+}
+
+.section-title{
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:1.8rem;
+}
+
+.counter-box h2{
+    font-size:1.6rem;
+}
+
+.tech-chip{
+    font-size:14px;
+    padding:8px 16px;
+}
+
+}
+
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.why-section {
+  background: #f8fafc;
+}
+
+/* =========================================================
+   WHY CARD
+========================================================= */
+
+.why-card {
+  height: 100%;
+  padding: 35px 25px;
+
+  text-align: center;
+
+  background: #fff;
+
+  border: none;
+  border-radius: 20px;
+
+  transition: all .35s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
+}
+
+/* =========================================================
+   ICON BOX
+========================================================= */
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 85px;
+  height: 85px;
+
+  margin: 0 auto 20px;
+
+  background: #0d6efd;
+  color: #fff;
+
+  border-radius: 50%;
+
+  font-size: 34px;
+
+  transition: all .4s ease;
+}
+
+.why-card:hover .icon-box {
+  background: #ffc107;
+  color: #111;
+
+  transform: rotate(360deg);
+}
+
+.why-card h4 {
+  margin-bottom: 15px;
+
+  color: #0f172a;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.why-card p {
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   COMMON BUTTONS
+========================================================= */
+
+.course-card .btn,
+.internship-card .btn,
+.why-card .btn {
+  font-weight: 600;
+  transition: .35s;
+}
+
+.course-card .btn:hover,
+.internship-card .btn:hover,
+.why-card .btn:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   ENTRANCE ANIMATION
+========================================================= */
+
+.course-card,
+.internship-card,
+.why-card {
+  animation: fadeUp .8s ease both;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:992px) {
+
+  .course-card,
+  .internship-card,
+  .why-card {
+    margin-bottom: 25px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .course-card .card-body,
+  .internship-card,
+  .why-card {
+    padding: 25px 20px;
+  }
+
+  .internship-card i,
+  .icon-box {
+    width: 75px;
+    height: 75px;
+    font-size: 32px;
+  }
+
+  .course-card h5,
+  .internship-card h4,
+  .why-card h4 {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .course-card .card-body,
+  .internship-card,
+  .why-card {
+    padding: 20px 18px;
+  }
+
+  .internship-card i,
+  .icon-box {
+    width: 65px;
+    height: 65px;
+    font-size: 28px;
+  }
+
+  .course-card h5,
+  .internship-card h4,
+  .why-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .course-card p,
+  .internship-card p,
+  .why-card p {
+    font-size: 14px;
+  }
+
+}
+
+
+
+/* ===========================================================
+   PROCESS SECTION
+=========================================================== */
+
+.process-section{
+    position: relative;
+    overflow: hidden;
+    padding:100px 0;
+    background:linear-gradient(180deg,#f7fbff 0%,#ffffff 100%);
+}
+
+/* ===========================================================
+   BACKGROUND GRID
+=========================================================== */
+
+.process-bg-grid{
+    position:absolute;
+    inset:0;
+
+    background-image:
+    linear-gradient(rgba(13,110,253,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(13,110,253,.05) 1px,transparent 1px);
+
+    background-size:55px 55px;
+
+    z-index:0;
+}
+
+/* ===========================================================
+   BLOBS
+=========================================================== */
+
+.blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    z-index:0;
+}
+
+.blob1{
+    width:420px;
+    height:420px;
+    top:-150px;
+    left:-120px;
+    background:#0d6efd33;
+}
+
+.blob2{
+    width:350px;
+    height:350px;
+    right:-80px;
+    top:120px;
+    background:#20c99730;
+}
+
+.blob3{
+    width:400px;
+    height:400px;
+    bottom:-180px;
+    left:40%;
+    background:#6f42c130;
+}
+
+/* ===========================================================
+   CIRCLES
+=========================================================== */
+
+.circle{
+    position:absolute;
+    border:2px solid rgba(13,110,253,.15);
+    border-radius:50%;
+    z-index:0;
+}
+
+.circle1{
+    width:140px;
+    height:140px;
+    top:18%;
+    right:8%;
+}
+
+.circle2{
+    width:80px;
+    height:80px;
+    bottom:18%;
+    left:10%;
+}
+
+.circle3{
+    width:50px;
+    height:50px;
+    top:60%;
+    right:28%;
+}
+
+/* ===========================================================
+   HEADING
+=========================================================== */
+
+.section-tag{
+
+    display:inline-block;
+
+    background:#0d6efd15;
+
+    color:#0d6efd;
+
+    padding:8px 20px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    font-size:.9rem;
+}
+
+.process-title{
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    color:#222;
+}
+
+.process-title span{
+
+    color:#0d6efd;
+}
+
+.typing-text{
+
+    color:#0d6efd;
+
+    font-weight:700;
+
+    min-height:55px;
+}
+
+.process-description{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+/* ===========================================================
+   CARD
+=========================================================== */
+
+.process-card{
+
+    position:relative;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    transition:.4s;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.06);
+}
+
+.process-card:hover{
+
+    box-shadow:
+
+    0 30px 60px rgba(13,110,253,.18);
+}
+
+/* ===========================================================
+   STEP NUMBER
+=========================================================== */
+
+.step-number{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    font-size:14px;
+
+    color:#fff;
+
+    background:#0d6efd;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+}
+
+/* ===========================================================
+   ICON
+=========================================================== */
+
+.icon-wrapper{
+
+    width:95px;
+
+    height:95px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#0d6efd,#4ea5ff);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+    transition:.4s;
+}
+
+.process-card:hover .icon-wrapper{
+
+    transform:rotateY(180deg) scale(1.08);
+}
+
+/* ===========================================================
+   CARD CONTENT
+=========================================================== */
+
+.card-title{
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+.card-description{
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+/* ===========================================================
+   BOTTOM LINE
+=========================================================== */
+
+.bottom-line{
+
+    width:0;
+
+    height:4px;
+
+    margin:auto;
+
+    margin-top:30px;
+
+    background:#0d6efd;
+
+    border-radius:20px;
+
+    transition:.4s;
+}
+
+.process-card:hover .bottom-line{
+
+    width:80%;
+}
+
+/* ===========================================================
+   GLOW
+=========================================================== */
+
+.card-glow{
+
+    position:absolute;
+
+    inset:-3px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    transparent,
+    rgba(13,110,253,.18),
+    transparent);
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:-1;
+}
+
+.process-card:hover .card-glow{
+
+    opacity:1;
+}
+
+/* ===========================================================
+   CTA
+=========================================================== */
+
+.cta-box{
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:60px 40px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    margin-top:80px;
+}
+
+.process-btn{
+
+    padding:14px 45px;
+
+    border-radius:50px;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,#0d6efd,#4ea5ff);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.process-btn:hover{
+
+    color:#fff;
+
+    box-shadow:
+
+    0 20px 40px rgba(13,110,253,.35);
+}
+
+/* ===========================================================
+   FLOATING DOTS
+=========================================================== */
+
+.dot{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:#0d6efd;
+
+    opacity:.18;
+}
+
+.dot1{
+
+    width:12px;
+
+    height:12px;
+
+    left:18%;
+
+    top:24%;
+}
+
+.dot2{
+
+    width:18px;
+
+    height:18px;
+
+    right:18%;
+
+    bottom:18%;
+}
+
+.dot3{
+
+    width:8px;
+
+    height:8px;
+
+    right:35%;
+
+    top:70%;
+}
+
+/* ===========================================================
+   SVG WAVE
+=========================================================== */
+
+.process-wave{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:140px;
+
+    z-index:0;
+}
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media(max-width:992px){
+
+.process-title{
+
+font-size:2.3rem;
+
+}
+
+.process-card{
+
+padding:35px 25px;
+
+}
+
+.cta-box{
+
+padding:45px 25px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.process-section{
+
+padding:70px 0;
+
+}
+
+.process-title{
+
+font-size:2rem;
+
+}
+
+.typing-text{
+
+font-size:1.3rem;
+
+}
+
+.icon-wrapper{
+
+width:80px;
+
+height:80px;
+
+}
+
+.process-description{
+
+padding:0 10px;
+
+}
+
+.process-wave{
+
+height:90px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.process-title{
+
+font-size:1.8rem;
+
+}
+
+.card-title{
+
+font-size:1.2rem;
+
+}
+
+.process-btn{
+
+width:100%;
+
+}
+
+.section-tag{
+
+font-size:.8rem;
+
+}
+
+}
+
+/* =========================================================
+   PART 3A
+   FAQ SECTION + CONTACT SECTION
+========================================================= */
+
+
+/* =========================================================
+   FAQ SECTION
+========================================================= */
+
+#faq {
+  position: relative;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+/* =========================================================
+   FAQ TITLE
+========================================================= */
+
+#faq .section-title {
+  color: #0f172a;
+}
+
+#faq .section-subtitle {
+  max-width: 700px;
+  margin: 15px auto 0;
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   ACCORDION ITEM
+========================================================= */
+
+#faq .accordion-item {
+  margin-bottom: 18px;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  border: none;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+
+  transition: all .35s ease;
+}
+
+#faq .accordion-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, .18);
+}
+
+/* =========================================================
+   ACCORDION BUTTON
+========================================================= */
+
+#faq .accordion-button {
+  padding: 20px 22px;
+
+  background: #fff;
+
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 600;
+
+  box-shadow: none;
+}
+
+#faq .accordion-button:focus {
+  box-shadow: none;
+}
+
+#faq .accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg,
+      #2563eb,
+      #7c3aed);
+
+  color: #fff;
+}
+
+#faq .accordion-button::after {
+  transition: .35s;
+}
+
+#faq .accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1);
+}
+
+/* =========================================================
+   ACCORDION BODY
+========================================================= */
+
+#faq .accordion-body {
+  padding: 20px 22px;
+
+  color: #6b7280;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-icon{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#0d6efd;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    flex-shrink:0;
+}
+
+.form-control{
+    border-radius:12px;
+    padding:14px 18px;
+    border:1px solid #dcdcdc;
+    transition:.3s;
+}
+
+.form-control:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 0 .2rem rgba(13,110,253,.15);
+}
+
+.btn-primary{
+    padding:14px 35px;
+    font-weight:600;
+}
+
+@media(max-width:991px){
+
+.contact-icon{
+    width:55px;
+    height:55px;
+    font-size:20px;
+}
+
+}
+/* =========================================================
+   PART 3B
+   PREMIUM FOOTER SECTION
+========================================================= */
+/* ==========================================================
+   FOOTER SECTION
+========================================================== */
+
+.footer-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #071126 0%, #0b1f42 50%, #0f2d63 100%);
+  color: #fff;
+  padding: 90px 0 25px;
+  z-index: 1;
+}
+
+.footer-section .container {
+  position: relative;
+  z-index: 5;
+}
+
+/* ==========================================================
+   WATERMARK
+========================================================== */
+
+.footer-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 900;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  animation: watermarkFloat 10s ease-in-out infinite;
+}
+
+@keyframes watermarkFloat {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, -53%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ==========================================================
+   GLOW CIRCLES
+========================================================== */
+
+.footer-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.footer-circle.one {
+  width: 340px;
+  height: 340px;
+  background: #0d6efd;
+  top: -120px;
+  left: -120px;
+}
+
+.footer-circle.two {
+  width: 280px;
+  height: 280px;
+  background: #00d4ff;
+  right: -100px;
+  bottom: -100px;
+}
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer-logo span {
+  color: #0dcaf0;
+}
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.9;
+  margin-bottom: 30px;
+  font-size: 15px;
+  max-width: 380px;
+}
+
+/* ==========================================================
+   SECTION TITLES
+========================================================== */
+
+.footer-title {
+  position: relative;
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #fff;
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 45px;
+  height: 3px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0dcaf0, #0d6efd);
+}
+
+/* ==========================================================
+   COLUMN SPACING
+========================================================== */
+
+.footer-section .row > div {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================
+   OPTIONAL GLASS CARD EFFECT
+========================================================== */
+
+.footer-section .col-lg-4,
+.footer-section .col-lg-3,
+.footer-section .col-lg-2 {
+  transition: all 0.35s ease;
+}
+
+.footer-section .col-lg-4:hover,
+.footer-section .col-lg-3:hover,
+.footer-section .col-lg-2:hover {
+  transform: translateY(-4px);
+}/* ==========================================================
+   SOCIAL ICONS
+========================================================== */
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  transition: all .35s ease;
+}
+
+.footer-social a:hover {
+  background: linear-gradient(135deg, #0dcaf0, #0d6efd);
+  color: #fff;
+  transform: translateY(-6px) rotate(8deg);
+  box-shadow: 0 12px 30px rgba(13, 110, 253, .35);
+}
+
+/* ==========================================================
+   QUICK LINKS
+========================================================== */
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-links li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: rgba(255,255,255,.75);
+  font-size: 15px;
+  transition: all .3s ease;
+}
+
+.footer-links li a i {
+  font-size: 12px;
+  color: #0dcaf0;
+  transition: all .3s ease;
+}
+
+.footer-links li a:hover {
+  color: #fff;
+  padding-left: 8px;
+}
+
+.footer-links li a:hover i {
+  transform: translateX(4px);
+  color: #fff;
+}
+
+/* ==========================================================
+   POPULAR COURSES
+========================================================== */
+
+.footer-links li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,.75);
+  transition: .3s;
+}
+
+.footer-links li i {
+  color: #0dcaf0;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.footer-links li:hover {
+  color: #fff;
+  transform: translateX(8px);
+}
+
+/* ==========================================================
+   CONTACT SECTION
+========================================================== */
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0dcaf0;
+  font-size: 20px;
+  transition: all .35s ease;
+}
+
+.contact-item:hover .contact-icon {
+  background: linear-gradient(135deg,#0dcaf0,#0d6efd);
+  color: #fff;
+  transform: rotate(-8deg) scale(1.08);
+  box-shadow: 0 12px 30px rgba(13,110,253,.35);
+}
+
+.contact-item strong {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.contact-item p {
+  margin: 0;
+  color: rgba(255,255,255,.75);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.contact-item a {
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  transition: .3s;
+}
+
+.contact-item a:hover {
+  color: #0dcaf0;
+}/* ==========================================================
+   FOOTER BOTTOM
+========================================================== */
+
+.footer-bottom {
+  position: relative;
+  margin-top: 60px;
+  padding-top: 30px;
+  z-index: 2;
+}
+
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  margin-bottom: 30px;
+}
+
+/* ==========================================================
+   COPYRIGHT
+========================================================== */
+
+.copyright {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.copyright strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   DEVELOPER NAME
+========================================================== */
+
+.developer-name {
+  color: #0dcaf0;
+  font-weight: 700;
+  margin-left: 6px;
+  transition: all 0.3s ease;
+}
+
+.developer-name:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(13, 202, 240, 0.8);
+}
+
+/* ==========================================================
+   HEART ICON
+========================================================== */
+
+.bi-heart-fill {
+  animation: heartbeat 1.6s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.25);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.25);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ==========================================================
+   BACK TO TOP BUTTON
+========================================================== */
+
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0dcaf0, #0d6efd);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.4);
+  transition: all 0.35s ease;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  transform: translateY(-8px) scale(1.08);
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(13, 110, 253, 0.55);
+}
+
+.back-to-top:active {
+  transform: scale(0.95);
+}
+
+.back-to-top i {
+  transition: transform 0.3s ease;
+}
+
+.back-to-top:hover i {
+  transform: translateY(-3px);
+}
+
+/* ==========================================================
+   FOOTER HOVER EFFECT
+========================================================== */
+
+.footer-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(13, 202, 240, 0.08),
+    transparent 40%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(13, 110, 253, 0.08),
+    transparent 40%
+  );
+  pointer-events: none;
+  z-index: 0;
+}/* ==========================================================
+   RESPONSIVE DESIGN
+========================================================== */
+
+/* ===========================
+   Large Screens (1400px+)
+=========================== */
+
+@media (min-width: 1400px) {
+
+  .footer-section {
+    padding: 100px 0 30px;
+  }
+
+  .footer-watermark {
+    font-size: 10rem;
+    letter-spacing: 15px;
+  }
+
+}
+
+/* ===========================
+   Laptop (1200px)
+=========================== */
+
+@media (max-width: 1199px) {
+
+  .footer-section {
+    padding: 80px 0 25px;
+  }
+
+  .footer-watermark {
+    font-size: 7rem;
+    letter-spacing: 8px;
+  }
+
+  .footer-logo {
+    font-size: 1.8rem;
+  }
+
+}
+
+/* ===========================
+   Tablet (992px)
+=========================== */
+
+@media (max-width: 991px) {
+
+  .footer-section {
+    padding: 70px 0 25px;
+    text-align: center;
+  }
+
+  .footer-watermark {
+    font-size: 5rem;
+    letter-spacing: 6px;
+  }
+
+  .footer-description {
+    max-width: 100%;
+    margin: 0 auto 30px;
+  }
+
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-contact {
+    align-items: center;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-bottom .row {
+    text-align: center;
+  }
+
+}
+
+/* ===========================
+   Mobile (768px)
+=========================== */
+
+@media (max-width: 767px) {
+
+  .footer-section {
+    padding: 60px 0 20px;
+  }
+
+  .footer-watermark {
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    opacity: 0.025;
+  }
+
+  .footer-logo {
+    font-size: 1.6rem;
+  }
+
+  .footer-title {
+    font-size: 1.15rem;
+  }
+
+  .footer-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .footer-links li,
+  .footer-links li a {
+    font-size: 14px;
+  }
+
+  .contact-item strong {
+    font-size: 15px;
+  }
+
+  .contact-item p {
+    font-size: 13px;
+  }
+
+  .contact-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    font-size: 18px;
+  }
+
+  .footer-social a {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .back-to-top {
+    width: 48px;
+    height: 48px;
+    right: 18px;
+    bottom: 18px;
+    font-size: 18px;
+  }
+
+}
+
+/* ===========================
+   Small Mobile (576px)
+=========================== */
+
+@media (max-width: 575px) {
+
+  .footer-section {
+    padding: 50px 0 15px;
+  }
+
+  .footer-watermark {
+    display: none;
+  }
+
+  .footer-circle.one {
+    width: 180px;
+    height: 180px;
+    top: -60px;
+    left: -60px;
+  }
+
+  .footer-circle.two {
+    width: 180px;
+    height: 180px;
+    bottom: -60px;
+    right: -60px;
+  }
+
+  .footer-logo {
+    font-size: 1.45rem;
+  }
+
+  .footer-social {
+    gap: 10px;
+  }
+
+  .footer-social a {
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
+
+}
+
+/* ===========================
+   Very Small Devices (400px)
+=========================== */
+
+@media (max-width: 400px) {
+
+  .footer-logo {
+    font-size: 1.3rem;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-description {
+    font-size: 13px;
+  }
+
+  .footer-links li,
+  .footer-links li a {
+    font-size: 13px;
+  }
+
+  .contact-item p {
+    font-size: 12px;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 16px;
+  }
+
+  .footer-social a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    right: 15px;
+    bottom: 15px;
+    font-size: 16px;
+  }
+
+}
+
+/* ==========================================================
+   SMOOTH SCROLL
+========================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+/* =========================================================
+   PART 3C
+   PRELOADER • BACK TO TOP • WHATSAPP
+   SCROLL PROGRESS • COMMON UTILITIES
+========================================================= */
+
+
+/* ==========================================
+   PRELOADER
+========================================== */
+
+.preloader{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(135deg,#020617,#071A35,#0B2447);
+
+    z-index:999999;
+
+}
+
+/* ==========================================
+   BACKGROUND GLOW
+========================================== */
+
+.bg-glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(180px);
+
+    opacity:.15;
+
+}
+
+.glow-one{
+
+    width:450px;
+    height:450px;
+
+    top:-150px;
+    left:-120px;
+
+    background:#00D4FF;
+
+}
+
+.glow-two{
+
+    width:450px;
+    height:450px;
+
+    bottom:-180px;
+    right:-100px;
+
+    background:#2563EB;
+
+}
+
+/* ==========================================
+   FLOATING DOTS
+========================================== */
+
+.dot{
+
+    position:absolute;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#00D4FF;
+
+    opacity:.6;
+
+}
+
+.dot1{
+top:15%;
+left:12%;
+}
+
+.dot2{
+top:25%;
+right:15%;
+}
+
+.dot3{
+bottom:20%;
+left:20%;
+}
+
+.dot4{
+bottom:15%;
+right:20%;
+}
+
+.dot5{
+top:50%;
+left:8%;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.loader-card{
+
+    position:relative;
+
+    width:430px;
+
+    padding:45px 35px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    background:
+    rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo-box{
+
+    width:105px;
+    height:105px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+    0 0 25px rgba(0,212,255,.45);
+
+}
+
+.logo-box img{
+
+    width:75px;
+    object-fit:contain;
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.loader-card h1{
+
+    color:#fff;
+
+    margin-top:25px;
+
+    font-size:38px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   SUBTITLE
+========================================== */
+
+.subtitle{
+
+    margin-top:10px;
+
+    color:#9EC5FF;
+
+    font-size:16px;
+
+}
+
+/* ==========================================
+   BADGE
+========================================== */
+
+.course-badge{
+
+    display:inline-block;
+
+    margin-top:22px;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    color:#00D4FF;
+
+    background:rgba(0,212,255,.08);
+
+    border:1px solid rgba(0,212,255,.2);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   LOADING TEXT
+========================================== */
+
+.loading-message{
+
+    margin-top:28px;
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    min-height:35px;
+
+}
+
+/* ==========================================
+   PROGRESS
+========================================== */
+
+.progress-wrapper{
+
+    margin-top:28px;
+
+}
+
+.progress-track{
+
+    width:100%;
+
+    height:10px;
+
+    background:#142A4C;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    width:0;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(90deg,#00D4FF,#00FF99);
+
+}
+
+.progress-info{
+
+    margin-top:12px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer-text{
+
+    margin-top:22px;
+
+    color:#8EB9FF;
+
+    font-size:14px;
+
+}/* ==========================================
+   LOGO FLOAT ANIMATION
+========================================== */
+
+.logo-box{
+    animation:logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px) scale(1.03);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================================
+   GLOW ANIMATION
+========================================== */
+
+.glow-one{
+    animation:glowOne 8s ease-in-out infinite alternate;
+}
+
+.glow-two{
+    animation:glowTwo 8s ease-in-out infinite alternate;
+}
+
+@keyframes glowOne{
+
+    from{
+        transform:translate(0,0) scale(1);
+    }
+
+    to{
+        transform:translate(60px,40px) scale(1.2);
+    }
+
+}
+
+@keyframes glowTwo{
+
+    from{
+        transform:translate(0,0) scale(1);
+    }
+
+    to{
+        transform:translate(-60px,-40px) scale(1.2);
+    }
+
+}
+
+/* ==========================================
+   FLOATING DOTS
+========================================== */
+
+.dot1{
+    animation:float1 6s ease-in-out infinite;
+}
+
+.dot2{
+    animation:float2 8s ease-in-out infinite;
+}
+
+.dot3{
+    animation:float3 7s ease-in-out infinite;
+}
+
+.dot4{
+    animation:float4 9s ease-in-out infinite;
+}
+
+.dot5{
+    animation:float5 5s ease-in-out infinite;
+}
+
+@keyframes float1{
+
+    50%{
+        transform:translateY(-30px);
+    }
+
+}
+
+@keyframes float2{
+
+    50%{
+        transform:translateX(25px);
+    }
+
+}
+
+@keyframes float3{
+
+    50%{
+        transform:translate(-20px,-20px);
+    }
+
+}
+
+@keyframes float4{
+
+    50%{
+        transform:translateY(20px);
+    }
+
+}
+
+@keyframes float5{
+
+    50%{
+        transform:translate(15px,-25px);
+    }
+
+}
+
+/* ==========================================
+   TEXT ANIMATION
+========================================== */
+
+.loading-message{
+
+    animation:textFade .8s ease;
+
+}
+
+@keyframes textFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   PROGRESS SHINE
+========================================== */
+
+.progress-fill{
+
+    position:relative;
+    transition:width .3s linear;
+
+}
+
+.progress-fill::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    right:0;
+
+    width:30px;
+    height:100%;
+
+    background:rgba(255,255,255,.9);
+
+    filter:blur(10px);
+
+}
+
+/* ==========================================
+   LOADING INFO
+========================================== */
+
+.progress-info span:last-child{
+
+    color:#00D4FF;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer-text{
+
+    animation:blink 2s infinite;
+
+}
+
+@keyframes blink{
+
+    0%,100%{
+        opacity:.5;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.loader-card:hover{
+
+    transform:translateY(-3px);
+
+    transition:.4s;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.loader-card{
+
+    width:92%;
+    padding:35px 20px;
+
+}
+
+.logo-box{
+
+    width:90px;
+    height:90px;
+
+}
+
+.logo-box img{
+
+    width:65px;
+
+}
+
+.loader-card h1{
+
+    font-size:28px;
+
+}
+
+.subtitle{
+
+    font-size:14px;
+
+}
+
+.course-badge{
+
+    font-size:12px;
+
+    padding:8px 14px;
+
+}
+
+.loading-message{
+
+    font-size:17px;
+    min-height:45px;
+
+}
+
+.progress-info{
+
+    font-size:14px;
+
+}
+
+.footer-text{
+
+    font-size:13px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.loader-card{
+
+    width:94%;
+
+    padding:28px 18px;
+
+}
+
+.loader-card h1{
+
+    font-size:24px;
+
+}
+
+.logo-box{
+
+    width:75px;
+    height:75px;
+
+}
+
+.logo-box img{
+
+    width:55px;
+
+}
+
+.progress-track{
+
+    height:8px;
+
+}
+
+.loading-message{
+
+    font-size:15px;
+
+}
+
+.course-badge{
+
+    font-size:11px;
+
+}
+
+}
+
+/* ==========================================
+   PRELOADER FADE
+========================================== */
+
+.preloader{
+
+    animation:fadeIn .5s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 55px;
+  height: 55px;
+
+  background: linear-gradient(135deg,
+      #2563eb,
+      #7c3aed,
+      #ec4899);
+
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  font-size: 22px;
+
+  box-shadow: 0 12px 30px rgba(37, 99, 235, .35);
+
+  transition: all .35s ease;
+
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  transform: translateY(-8px) scale(1.08);
+
+  color: #ffffff;
+
+  box-shadow: 0 18px 40px rgba(37, 99, 235, .45);
+}
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.whatsapp {
+  position: fixed;
+
+  left: 20px;
+  bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  background: #25d366;
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  font-size: 30px;
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, .25);
+
+  transition: all .35s ease;
+
+  z-index: 999;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+
+  color: #ffffff;
+
+  box-shadow: 0 15px 35px rgba(37, 211, 102, .45);
+}
+
+/* =========================================================
+   SCROLL PROGRESS BAR
+========================================================= */
+
+.progress-bar-scroll {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 0%;
+  height: 4px;
+
+  background: linear-gradient(90deg,
+      #2563eb,
+      #7c3aed,
+      #ec4899);
+
+  z-index: 9999;
+
+  transition: width .15s linear;
+}
+
+/* =========================================================
+   COMMON UTILITIES
+========================================================= */
+
+.shadow-hover {
+  transition: all .35s ease;
+}
+
+.shadow-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .15);
+}
+
+.rounded-xl {
+  border-radius: 20px;
+}
+
+.rounded-pill-xl {
+  border-radius: 50px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg,
+      #2563eb,
+      #7c3aed,
+      #ec4899);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg,
+      #2563eb,
+      #7c3aed);
+}
+
+/* =========================================================
+   FADE UP ANIMATION
+========================================================= */
+
+.fade-up {
+  animation: fadeUp .8s ease both;
+}
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* =========================================================
+   FLOAT ANIMATION
+========================================================= */
+
+.float-animation {
+  animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+}
+
+/* =========================================================
+   PULSE ANIMATION
+========================================================= */
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:992px) {
+
+  .back-to-top,
+  .whatsapp {
+    width: 52px;
+    height: 52px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .back-to-top {
+    right: 15px;
+    bottom: 15px;
+
+    width: 48px;
+    height: 48px;
+
+    font-size: 18px;
+  }
+
+  .whatsapp {
+    left: 15px;
+    bottom: 15px;
+
+    width: 55px;
+    height: 55px;
+
+    font-size: 28px;
+  }
+
+  .preloader img {
+    width: 90px;
+  }
+
+  .preloader p {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+
+    font-size: 16px;
+  }
+
+  .whatsapp {
+    width: 50px;
+    height: 50px;
+
+    font-size: 24px;
+  }
+
+}

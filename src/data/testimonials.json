@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Yogesh ",
+    "course": "Python internship",
+    "rating": 5,
+    "review": "The teaching method is excellent and easy to understand. I completed the Python Internship, and it helped me improve my programming skills and gain practical knowledge. Thank you, KSquare Softtech!",
+    "image": "/src/assets/Internship/image/yogesh.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Jayalakshmi S",
+    "course": "Basic Computer Course",
+    "rating": 5,
+    "review": "Excellent academy! It provides a bright future for your career and employment.",
+    "image": "/src/assets/Course/image/jaya.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "SivaPriya K",
+    "course": "Python Programming",
+    "rating": 5,
+    "review": "I joined basic computer course at KK Academy with zero knowledge.Now I can work confidently in MS Office and internet. Friendly teaching and practical training super",
+    "image": "/src/assets/Course/image/Sivapiya.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Aparna K",
+    "course": "Web Development Internship" ,
+    "rating": 5,
+    "review": "I learned SEO, Google Ads, Meta Ads, and social media marketing with real campaigns. Highly recommended.",
+    "image": "/src/assets/Internship/image/aparna.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Janani Sri Marisamy",
+    "course": "Internship Program",
+    "rating": 5,
+    "review": "The classes were very useful and helped to gain knowledge. Mentors were very sweet and friendly 💫",
+    "image": "/src/assets/Internship/image/janai.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Deepika ",
+    "course": "UI/UX Design",
+    "rating": 5,
+    "review": "The UI/UX sessions were interactive and creative. I learned Figma, design principles, and created my own portfolio.",
+    "image": "https://i.pravatar.cc/150?img=45"
+  },
+  {
+    "id": 7,
+    "name": "Mohammed Ali",
+    "course": "Java Full Stack",
+    "rating": 5,
+    "review": "The curriculum covered Java, Spring Boot, React, and databases. Placement support was excellent.",
+    "image": "https://i.pravatar.cc/150?img=68"
+  },
+  {
+    "id": 8,
+    "name": "Keerthana P",
+    "course": "Web Development",
+    "rating": 5,
+    "review": "A great learning environment with experienced trainers. I completed multiple responsive websites during the course.",
+    "image": "https://i.pravatar.cc/150?img=24"
+  }
+]

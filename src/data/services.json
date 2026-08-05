@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "icon": "bi-code-slash",
+    "title": "Web Development",
+    "description": "Responsive websites using React, Bootstrap and modern technologies."
+  },
+  {
+    "id": 2,
+    "icon": "bi-phone",
+    "title": "App Development",
+    "description": "Android and cross-platform mobile application development."
+  },
+  {
+    "id": 3,
+    "icon": "bi-bar-chart",
+    "title": "Digital Marketing",
+    "description": "SEO, Social Media Marketing, Google Ads and Meta Ads."
+  },
+  {
+    "id": 4,
+    "icon": "bi-cpu",
+    "title": "Artificial Intelligence",
+    "description": "AI, Machine Learning and Deep Learning solutions."
+  },
+  {
+    "id": 5,
+    "icon": "bi-database",
+    "title": "Data Science",
+    "description": "Python, Data Analysis, Visualization and Predictive Analytics."
+  },
+  {
+    "id": 6,
+    "icon": "bi-mortarboard",
+    "title": "Internship & Training",
+    "description": "Real-time projects with internship and placement support."
+  }
+]

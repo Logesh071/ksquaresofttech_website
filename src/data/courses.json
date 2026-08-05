@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "AI Enhanced Full Stack Development (MERN)",
+    "description": "Master HTML, CSS, JavaScript, React, Node.js, Express, MongoDB and AI tools with real-world projects.",
+    "duration": "6 Months",
+    "level": "Beginner to Advanced",
+    "students": "250+",
+    "icon": "bi-code-slash"
+  },
+  {
+    "id": 2,
+    "title": "AI Powered Data Science & Machine Learning",
+    "description": "Learn Python, Machine Learning, Deep Learning, AI, SQL and Power BI using real-world datasets.",
+    "duration": "6 Months",
+    "level": "Intermediate",
+    "students": "180+",
+    "icon": "bi-cpu"
+  },
+  {
+    "id": 3,
+    "title": "AI Powered Python Programming",
+    "description": "Build a strong foundation in Python, automation, APIs and AI programming with hands-on practice.",
+    "duration": "3 Months",
+    "level": "Beginner",
+    "students": "200+",
+    "icon": "bi-filetype-py"
+  },
+  {
+    "id": 4,
+    "title": "AI Driven Data Analytics",
+    "description": "Analyze business data using Excel, SQL, Power BI, Python and AI-assisted analytics tools.",
+    "duration": "4 Months",
+    "level": "Beginner to Intermediate",
+    "students": "150+",
+    "icon": "bi-bar-chart-line"
+  },
+  {
+    "id": 5,
+    "title": "AI Powered Digital Marketing",
+    "description": "Learn SEO, Google Ads, Meta Ads, Content Creation and AI tools for modern digital marketing.",
+    "duration": "3 Months",
+    "level": "Beginner",
+    "students": "220+",
+    "icon": "bi-megaphone"
+  },
+  {
+    "id": 6,
+    "title": "AI Enhanced Frontend Development",
+    "description": "Design responsive web applications using HTML, CSS, Bootstrap, JavaScript, React and AI coding assistants.",
+    "duration": "3 Months",
+    "level": "Beginner to Intermediate",
+    "students": "170+",
+    "icon": "bi-window"
+  }
+]

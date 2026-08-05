@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Full Stack Development 💻",
+    "subtitle": "Become a MERN Stack Developer",
+    "background": "linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb)",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80&auto=format&fit=crop",
+    "review": {
+      "name": "Aravind Kumar",
+      "course": "MERN Stack Developer",
+      "rating": "⭐⭐⭐⭐⭐",
+      "message": "Excellent trainers, live projects and placement support.",
+      "video": "/src/assets/sucess.mp4"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Data Science 📊",
+    "subtitle": "Master Python & Analytics",
+    "background": "linear-gradient(135deg,#111827,#0ea5e9,#0284c7)",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop",
+    "review": {
+      "name": "Priya",
+      "course": "Data Science Student",
+      "rating": "⭐⭐⭐⭐⭐",
+      "message": "The trainers explained every concept clearly and helped me get internship experience.",
+      "video": "/src/assets/sucess.mp4"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Artificial Intelligence 🤖",
+    "subtitle": "Build AI Powered Applications",
+    "background": "linear-gradient(135deg,#4F46E5,#7C3AED)",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&auto=format&fit=crop",
+    "review": {
+      "name": "Rahul",
+      "course": "AI Engineer",
+      "rating": "⭐⭐⭐⭐⭐",
+      "message": "Excellent AI training with real-time projects and placement support.",
+      "video": "/src/assets/sucess.mp4"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Python Programming 🐍",
+    "subtitle": "Learn Python From Scratch",
+    "background": "linear-gradient(135deg,#EA580C,#F97316)",
+    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=1200&q=80&auto=format&fit=crop",
+    "review": {
+      "name": "Suresh",
+      "course": "Python Developer",
+      "rating": "⭐⭐⭐⭐⭐",
+      "message": "Very practical sessions with experienced trainers.",
+      "video":"/src/assets/sucess.mp4"
+    }
+  }
+]

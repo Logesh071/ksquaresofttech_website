@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "College Management System",
+    "category": "Web Application",
+    "technology": "React, Node.js, MongoDB",
+    "image": "https://picsum.photos/600/400?random=1"
+  },
+  {
+    "id": 2,
+    "title": "E-Commerce Website",
+    "category": "Web Development",
+    "technology": "React, Bootstrap",
+    "image": "https://picsum.photos/600/400?random=2"
+  },
+  {
+    "id": 3,
+    "title": "Hospital Management",
+    "category": "Software",
+    "technology": "React, Express, MongoDB",
+    "image": "https://picsum.photos/600/400?random=3"
+  },
+  {
+    "id": 4,
+    "title": "Student Portal",
+    "category": "Education",
+    "technology": "React, Firebase",
+    "image": "https://picsum.photos/600/400?random=4"
+  },
+  {
+    "id": 5,
+    "title": "AI Attendance System",
+    "category": "Artificial Intelligence",
+    "technology": "Python, OpenCV",
+    "image": "https://picsum.photos/600/400?random=5"
+  },
+  {
+    "id": 6,
+    "title": "CRM Software",
+    "category": "Business",
+    "technology": "React, Node.js",
+    "image": "https://picsum.photos/600/400?random=6"
+  }
+]

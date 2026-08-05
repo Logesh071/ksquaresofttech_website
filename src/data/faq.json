@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "category": "Admission",
+    "icon": "FaUserGraduate",
+    "question": "Who can join KSquare SoftTech courses?",
+    "answer": "Our courses are open to students, fresh graduates, working professionals, entrepreneurs, and anyone looking to build a successful career in IT. Beginner-friendly and advanced programs are available.",
+    "isPopular": true
+  },
+  {
+    "id": 2,
+    "category": "Training",
+    "icon": "FaChalkboardTeacher",
+    "question": "Do you provide practical training?",
+    "answer": "Yes. We focus on practical learning through live projects, real-world case studies, coding exercises, assignments, and hands-on practice to ensure industry-ready skills.",
+    "isPopular": true
+  },
+  {
+    "id": 3,
+    "category": "Support",
+    "icon": "FaHeadset",
+    "question": "Do you provide 100% student support?",
+    "answer": "Yes. We provide complete support throughout your learning journey, including one-to-one mentoring, doubt clarification, project guidance, career counseling, and technical assistance.",
+    "isPopular": true
+  },
+  {
+    "id": 4,
+    "category": "Internship",
+    "icon": "FaLaptopCode",
+    "question": "Do you provide internships?",
+    "answer": "Yes. Students gain real-time industry experience by working on live projects under expert mentors. Internship certificates are provided after successful completion.",
+    "isPopular": true
+  },
+  {
+    "id": 5,
+    "category": "Certification",
+    "icon": "FaCertificate",
+    "question": "Will I receive a certificate?",
+    "answer": "Yes. Course completion and internship certificates are provided after successfully completing the respective programs.",
+    "isPopular": false
+  },
+  {
+    "id": 6,
+    "category": "Placement",
+    "icon": "FaBriefcase",
+    "question": "Do you provide placement assistance?",
+    "answer": "Yes. We provide resume building, LinkedIn profile optimization, aptitude training, mock interviews, technical interview preparation, and placement assistance.",
+    "isPopular": true
+  },
+  {
+    "id": 7,
+    "category": "Learning Mode",
+    "icon": "FaVideo",
+    "question": "Are online and offline classes available?",
+    "answer": "Yes. We offer both online and offline classes with flexible batch timings to suit students and working professionals.",
+    "isPopular": false
+  },
+  {
+    "id": 8,
+    "category": "Courses",
+    "icon": "FaCode",
+    "question": "What courses do you offer?",
+    "answer": "We offer Full Stack Development (MERN), React.js, Java, Python, AI, Machine Learning, Data Science, Data Analytics, UI/UX Design, Digital Marketing, Web Development, and more.",
+    "isPopular": true
+  },
+  {
+    "id": 9,
+    "category": "Projects",
+    "icon": "FaProjectDiagram",
+    "question": "Will I work on live projects?",
+    "answer": "Absolutely. Every student works on real-time projects to build a strong portfolio and gain practical industry experience.",
+    "isPopular": true
+  },
+  {
+    "id": 10,
+    "category": "Career",
+    "icon": "FaRocket",
+    "question": "Why choose KSquare SoftTech?",
+    "answer": "KSquare SoftTech provides industry-focused training, experienced mentors, practical learning, live projects, internship opportunities, career guidance, and dedicated student support to help you succeed.",
+    "isPopular": true
+  }
+]

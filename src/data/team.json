@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Logesh B",
+    "role": "Founder & CEO",
+    "description": "Leading KSquare SoftTech with innovation and technology.",
+    "image": "/images/team/logesh.jpg"
+  },
+  {
+    "id": 2,
+    "name": "kavin",
+    "role": "Full Stack Developer",
+    "description": "Develops scalable MERN stack applications.",
+    "image": "/images/team/harini.jpg"
+  },
+  {
+    "id": 3,
+    "name": "divya",
+    "role": "UI/UX Designer",
+    "description": "Designs modern and user-friendly interfaces.",
+    "image": "/images/team/praveen.jpg"
+  },
+  {
+    "id": 4,
+    "name": "gowtham",
+    "role": "Digital Marketing",
+    "description": "Handles branding, SEO and social media campaigns.",
+    "image": "/images/team/rahul.jpg"
+  },
+  {
+    "id": 5,
+    "name": "saran",
+    "role": "Python Developer",
+    "description": "Builds backend APIs and automation solutions.",
+    "image": "/images/team/arun.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Keerthana",
+    "role": "HR Manager",
+    "description": "Manages recruitment and employee engagement.",
+    "image": "/images/team/keerthana.jpg"
+  }
+]
