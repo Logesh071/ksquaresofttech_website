@@ -5,7 +5,7 @@
     "course": "Python internship",
     "rating": 5,
     "review": "The teaching method is excellent and easy to understand. I completed the Python Internship, and it helped me improve my programming skills and gain practical knowledge. Thank you, KSquare Softtech!",
-    "image": "/src/assets/Internship/image/yogesh.jpeg"
+    "image": "/src/assets/Internship/image/yogesh.webp"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "course": "Basic Computer Course",
     "rating": 5,
     "review": "Excellent academy! It provides a bright future for your career and employment.",
-    "image": "/src/assets/Course/image/jaya.jpeg"
+    "image": "/src/assets/Internship/image/jaya.webp"
   },
   {
     "id": 3,
@@ -21,15 +21,15 @@
     "course": "Python Programming",
     "rating": 5,
     "review": "I joined basic computer course at KK Academy with zero knowledge.Now I can work confidently in MS Office and internet. Friendly teaching and practical training super",
-    "image": "/src/assets/Course/image/Sivapiya.jpeg"
+    "image": "/src/assets/Internship/image/sivariya.webp"
   },
   {
     "id": 4,
     "name": "Aparna K",
-    "course": "Web Development Internship" ,
+    "course": "Web Development Internship",
     "rating": 5,
     "review": "I learned SEO, Google Ads, Meta Ads, and social media marketing with real campaigns. Highly recommended.",
-    "image": "/src/assets/Internship/image/aparna.jpeg"
+    "image": "/src/assets/Internship/image/aparna.webp"
   },
   {
     "id": 5,
@@ -37,30 +37,38 @@
     "course": "Internship Program",
     "rating": 5,
     "review": "The classes were very useful and helped to gain knowledge. Mentors were very sweet and friendly 💫",
-    "image": "/src/assets/Internship/image/janai.jpg"
+    "image": "/src/assets/Internship/image/janai.webp"
   },
   {
     "id": 6,
-    "name": "Deepika ",
-    "course": "UI/UX Design",
+    "name": "SHAMRUTHI",
+    "course": "Web Development",
     "rating": 5,
-    "review": "The UI/UX sessions were interactive and creative. I learned Figma, design principles, and created my own portfolio.",
-    "image": "https://i.pravatar.cc/150?img=45"
+    "review": "I attended the 15-day internship classes at KSquare Softtech, and it was a really useful learning experience. The internship helped me improve my knowledge and practical skills. The trainers guided every student in a friendly and supportive manner, making it easy to learn and ask questions. It is an excellent place for both professional growth and skill development. I highly recommend KSquare Softtech to anyone looking to advance their career in technology. KSquare Softtech is the right place! 💯 Thank you all for your friendly guidance. 🙂 Everyone, please make use of this opportunity and gain valuable knowledge for a bright career. ✨",
+    "image": "/src/assets/Internship/image/shamurthi.webp"
   },
   {
     "id": 7,
-    "name": "Mohammed Ali",
-    "course": "Java Full Stack",
+    "name": "PON ABISRI S",
+    "course": "Web Development",
     "rating": 5,
-    "review": "The curriculum covered Java, Spring Boot, React, and databases. Placement support was excellent.",
-    "image": "https://i.pravatar.cc/150?img=68"
+    "review": "I attended the 15-day internship classes at KSquare Softtech, and it was a great learning experience. During these 15 days, I gained valuable knowledge and improved my technical skills. The trainers were very friendly and supportive. No matter how many questions we asked, they patiently explained everything until we understood. I highly recommend KSquare Softtech to anyone who wants to learn new skills and gain knowledge. Thank you so much to the entire team!",
+    "image": "/src/assets/Internship/image/ponabisri.webp"
   },
   {
     "id": 8,
-    "name": "Keerthana P",
+    "name": "rithanika muthukumar",
     "course": "Web Development",
     "rating": 5,
-    "review": "A great learning environment with experienced trainers. I completed multiple responsive websites during the course.",
-    "image": "https://i.pravatar.cc/150?img=24"
+    "review": "Intership class attend 15 daysBy kasc student 💚Thank you for your teachingNaga ketanum slule online la athum night class potaga aprm fast ah atukama slow a puriyamathiri athuthaga 🥰 na Puriyala nu slunalum oru time kuta sakatam ilama slule thanthaga ithu ena oda job oda first step ah Iruku oru mam ah iruthu nala friend aha maritaga...Sir pathi slulam na anna mathiri really oru family mathiri iruthu lovely teaching just online class ah ilama offline class ah pochu oru class teaching mattum athutha ila Aatha student ah iruthalum ena da class mattum athutha full boring class poguthu nu nenapaga Nenga but inga apdi ilama nala fun and classes ah pochu apo tha nala learn panuvaga students😍💫15 days apdi pochu aa thrl 🙂Best place for the course learning And internship ✨",
+    "image": "/src/assets/Internship/image/rithu.webp"
+  },
+  {
+    "id": 9,
+    "name": "Rithish Ashok",
+    "course": "Python Programming",
+    "rating": 5,
+    "review": "I had a great learning experience at this computer training institute. The trainers are friendly, knowledgeable, and explain every concept clearly. The practical sessions helped me improve my skills and build confidence. They are always willing to clear doubts and provide good guidance. I highly recommend this institute to anyone who wants to learn computer skills in a supportive environment. Thank you for the excellent training!",
+    "image": "/src/assets/Internship/image/rithish.webp"
   }
 ]

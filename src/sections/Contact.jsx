@@ -27,7 +27,7 @@ function Contact() {
 ${message}
 `;
 
-    const phoneNumber = "918807754570";
+    const phoneNumber = "91 70107 98196";
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       whatsappMessage
@@ -142,7 +142,7 @@ ${message}
                   </h5>
 
                   <p className="text-muted mb-0">
-                    +91 88077 54570
+                    +91 70107 98196
                   </p>
                 </div>
 
@@ -160,7 +160,7 @@ ${message}
                   </h5>
 
                   <p className="text-muted mb-0">
-                    info@ksquaresofttech.com
+                    ksquaresofttechcbe@gmail.com
                   </p>
                 </div>
 
