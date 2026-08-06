@@ -7,7 +7,7 @@ function OfferBar() {
     "🏆 100% Placement Assistance",
     "🎓 Beginner to Advanced Training",
     "⏳ Limited Seats - Register Today",
-    "📞 Call / WhatsApp: +91 8807754570",
+    "📞 Call / WhatsApp: +91 88077 54570",
   ];
 
   return (
