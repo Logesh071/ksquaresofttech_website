@@ -1,0 +1,15 @@
+# ===================================
+# KSquare Softtech Robots File
+# ===================================
+
+User-agent: *
+
+Allow: /
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /dashboard/
+
+Host: https://ksquaresofttech.org
+
+Sitemap: https://ksquaresofttech.org/sitemap.xml

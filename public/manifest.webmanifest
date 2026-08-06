@@ -1,0 +1,30 @@
+{
+  "name": "KSquare Softtech",
+  "short_name": "KSquare",
+  "description": "Software Development Company & IT Training Institute",
+
+  "start_url": "/",
+
+  "display": "standalone",
+
+  "background_color": "#ffffff",
+
+  "theme_color": "#0D6EFD",
+
+  "orientation": "portrait",
+
+  "scope": "/",
+
+  "icons": [
+    {
+      "src": "/src/assets/logo.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/src/assets/logo.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
