@@ -1,70 +1,198 @@
+/* ==============================
+   POPUP OVERLAY
+================================= */
+
 .popup-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  height: 100dvh;
+
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+
+  padding: 20px;
+
+  z-index: 99999;
+
+  animation: overlayFade 0.3s ease;
 }
 
+
+/* ==============================
+   POPUP CONTAINER
+================================= */
 .popup-container {
   position: relative;
-  width: 90%;
-  max-width: 450px;
-  border-radius: 15px;
+  width: min(450px, 92vw);
+  max-height: 88dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 16px;
   overflow: hidden;
-  animation: popup 0.4s ease;
+
+  background: transparent;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+
+  animation: popup 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .popup-image {
   width: 100%;
+  height: auto;
+  max-height: 88dvh;
+
   display: block;
-  border-radius: 15px;
+  object-fit: contain;
 }
+
+
+/* ==============================
+   CLOSE BUTTON
+================================= */
 
 .popup-close {
   position: absolute;
+
   top: 10px;
   right: 10px;
-  width: 35px;
-  height: 35px;
-  border: none;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  background: #ff0000;
+
+  background: rgba(0, 0, 0, 0.65);
   color: #fff;
-  font-size: 22px;
+
+  font-size: 25px;
+  font-weight: 500;
+
+  line-height: 1;
+
   cursor: pointer;
+
   z-index: 10;
+
+  transition: all 0.25s ease;
 }
+
+
+/* Hover */
 
 .popup-close:hover {
-  background: #d60000;
+  background: #dc3545;
+  transform: rotate(90deg) scale(1.05);
 }
 
-@keyframes popup {
+
+/* ==============================
+   OVERLAY ANIMATION
+================================= */
+
+@keyframes overlayFade {
   from {
-    transform: scale(0.8);
     opacity: 0;
   }
 
   to {
-    transform: scale(1);
     opacity: 1;
   }
 }
 
+
+/* ==============================
+   POPUP ANIMATION
+================================= */
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+/* ==============================
+   TABLET
+================================= */
+
 @media (max-width: 768px) {
+
+  .popup-overlay {
+    padding: 15px;
+  }
+
   .popup-container {
-    max-width: 90%;
+    width: 92vw;
+    max-width: 430px;
+    max-height: 88dvh;
+
+    border-radius: 12px;
+  }
+
+  .popup-image {
+    max-height: 88dvh;
   }
 
   .popup-close {
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
+    width: 34px;
+    height: 34px;
+
+    top: 8px;
+    right: 8px;
+
+    font-size: 23px;
+  }
+}
+
+
+/* ==============================
+   MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+  .popup-overlay {
+    padding: 10px;
+  }
+
+  .popup-container {
+    width: 94vw;
+    max-height: 85dvh;
+
+    border-radius: 10px;
+  }
+
+  .popup-image {
+    max-height: 85dvh;
+  }
+
+  .popup-close {
+    width: 32px;
+    height: 32px;
+
+    top: 7px;
+    right: 7px;
+
+    font-size: 21px;
   }
 }

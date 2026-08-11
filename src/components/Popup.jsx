@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Popup.css";
-import popupPoster from "../assets/Popup/workshop_fsd.jpeg"; 
+import popupPoster from "../assets/Popup/Independence.png";
 
 function Popup() {
   const [showPopup, setShowPopup] = useState(false);
@@ -20,22 +20,25 @@ function Popup() {
   if (!showPopup) return null;
 
   return (
-    <div className="popup-overlay">
-      <div className="popup-container">
-
+    <div className="popup-overlay" onClick={closePopup}>
+      <div
+        className="popup-container"
+        onClick={(e) => e.stopPropagation()}
+      >
         <button
+          type="button"
           className="popup-close"
           onClick={closePopup}
+          aria-label="Close popup"
         >
           ×
         </button>
 
         <img
           src={popupPoster}
-          alt="Workshop Poster"
+          alt="KSquare Softtech Independence Day"
           className="popup-image"
         />
-
       </div>
     </div>
   );
